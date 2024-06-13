@@ -5,20 +5,20 @@
 
 int R = 0;
 int C = 0;
-std::vector<std::vector<int>> Maze;
 int dx[4] = {1, -1, 0, 0};
 int dy[4] = {0, 0, 1, -1};
 
 int main()
 {
+	
+
 	std::cin >> R;
 	std::cin >> C;
-	Maze.resize(R);
+
+	std::vector<std::vector<int>> Maze(R, std::vector<int>(C));
 
 	for (int i = 0; i < R; ++i)
 	{
-		Maze[i].resize(C);
-
 		std::string Row;
 		std::cin >> Row;
 		
@@ -29,16 +29,7 @@ int main()
 	}
 
 	std::queue<std::pair<int, int>> Point2D;
-	std::vector<std::vector<int>> Dist2D;
-	Dist2D.resize(R);
-	for (int i = 0; i < R; ++i)
-	{
-		Dist2D[i].resize(C);
-		for (int j = 0; j < C; ++j)
-		{
-			Dist2D[i][j] = -1;
-		}
-	}
+	std::vector<std::vector<int>> Dist2D(R, std::vector<int>(C, -1));
 
 	Point2D.push({0, 0});
 	Dist2D[0][0] = 1;
