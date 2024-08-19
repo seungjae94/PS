@@ -6,11 +6,11 @@ using namespace std;
 
 vector<string> tokenize(string s, string delimiter)
 {
-    vector<string> res;
+    vector<string> tokens;
     
     size_t start_pos = 0;
     size_t end_pos;
-    size_t delimiter_size = delimiter.size();
+    size_t delim_size = delimiter.size();
     
     string token;
     
@@ -20,17 +20,18 @@ vector<string> tokenize(string s, string delimiter)
         
         if (end_pos == string::npos)
         {
+            token = s.substr(start_pos);
             break;
         }
         
         token = s.substr(start_pos, end_pos - start_pos);
-        start_pos = end_pos + delimiter_size;
-        res.push_back(token);
+        start_pos = end_pos + delim_size;
+        
+        tokens.push_back(token);
     }
     
-    token = s.substr(start_pos);
-    res.push_back(token);
-    return res;
+    tokens.push_back(token);
+    return tokens;
 }
 
 string solution(string s) {

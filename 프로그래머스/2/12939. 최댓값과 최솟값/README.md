@@ -1,10 +1,10 @@
 # [level 2] 최댓값과 최솟값 - 12939 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939?language=cpp) 
 
 ### 성능 요약
 
-메모리: 4.21 MB, 시간: 0.04 ms
+메모리: 4.22 MB, 시간: 0.04 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 08월 19일 12:28:38
+2024년 08월 19일 12:37:05
 
 ### 문제 설명
 
